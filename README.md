@@ -18,7 +18,7 @@ Se trata de un tipo de orquestación de stacks de contenedores. Cuando queremos 
 compose se encarga de mantener los procesos y configurar la red subyacente para que estos estén constantemente **up and running**. 
 Si alguno de los servicios falla, compose se encarga de volver a arrancarlo manteniendo la integridad del stack.
 <br/>
-### ¿Cómo funciona?
+### ¿Cómo funciona? 
 En un fichero docker-compose, es posible definir tres tipos de recursos básicos:
 **-	Servicios:** la sección de servicios hace referencia a la configuración de los contendores. Teniendo en cuenta nuestro objetivo final, nuestra sección se servicios estará compuesta por tres servicios contenerizados, un servicio de front, un back y una capa de persistencia.
 **-	Volúmenes:** hace referencia a un espacio de disco físico que será reservado en el host para persistir la información de uno o varios servicios contenerizados.
