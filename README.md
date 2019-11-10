@@ -62,3 +62,16 @@ Añádelo al PATH mediante un enlace simbólico
 > Si todo ha ido bien, se mostrará la versión instalada de docker-compose.
 <br/>
 
+### Paso 2. Definir la configuración del servicio de frontend.
+Para definir la configuración del servicio de frontend, debemos tener en cuenta los siguientes puntos:
+<br/>
+- Nombre de la imagen
+- Puerto que expone
+<br/>
+
+```
+my-frontend:
+    image: helloworld:latest
+    ports:
+      - "8080:80"
+```
