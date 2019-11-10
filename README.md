@@ -67,8 +67,6 @@ Para definir la configuración del servicio de frontend, debemos tener en cuenta
 <br/>
 - Nombre de la imagen
 - Puerto que expone
-<br/>
-
 ```
 my-frontend:
     image: helloworld:latest
@@ -76,15 +74,51 @@ my-frontend:
       - "8080:80"
 ```
 ### Paso 3. Definir la configuración del servicio de backend.
-Para definir la configuración del servicio de frontend, debemos tener en cuenta los siguientes puntos:
+Para definir la configuración del servicio de backend, debemos tener en cuenta los siguientes puntos:
 <br/>
 - Nombre de la imagen
 - Puerto que expone
-<br/>
-
 ```
 my-backend:
     image: ...
     ports:
       - "...."
 ```
+### Paso 4. Definir la configuración del servicio de persistencia.
+Para definir la configuración del servicio de persistencia, debemos tener en cuenta los siguientes puntos:
+<br/>
+- Nombre de la imagen
+- Puerto que expone
+- Mapeo del volumen de persistencia de datos
+```
+db:
+    image: ...
+    ports:
+      - "...."
+    volumes:
+      - my-volume:/.../...
+```
+### Paso 5. Definir el fichero YAML completo.
+Ahora que tenemos la configuración de los tres servicios, ya podemos definir el docker-compose completo:
+```
+version: '3'
+services:
+  my-frontend:
+      image: helloworld:latest
+      ports:
+        - "8080:80"
+  my-backend:
+      image: ...
+      ports:
+        - "...."
+  db:
+      image: ...
+      ports:
+        - "...."
+      volumes:
+        - my-volume:/.../...
+volumes:
+  - my-volume:
+```
+> **Recuerda definir el recurso de volúmenes**
+
