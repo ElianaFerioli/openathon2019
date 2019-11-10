@@ -75,3 +75,16 @@ my-frontend:
     ports:
       - "8080:80"
 ```
+### Paso 3. Definir la configuración del servicio de backend.
+Para definir la configuración del servicio de frontend, debemos tener en cuenta los siguientes puntos:
+<br/>
+- Nombre de la imagen
+- Puerto que expone
+<br/>
+
+```
+my-backend:
+    image: ...
+    ports:
+      - "...."
+```
