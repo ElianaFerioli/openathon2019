@@ -5,7 +5,7 @@
 <br/>
 </p>
 <br/>
-# Objetivos y resultados
+## Objetivos y resultados
 <br/>
 El objetivo de este laboratorio es crear una stack de servicios orquestados por **docker-compose**. Para ello, aprovecharemos la imágenes Docker que hemos generado en los laboratiorios anteriores.
 Como resultado, obtendremos un fichero YAML con toda la configuración necesarioa para levantar nuestro stack con un solo comando.
