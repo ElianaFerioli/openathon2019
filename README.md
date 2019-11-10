@@ -99,7 +99,7 @@ db:
       - my-volume:/.../...
 ```
 ### Paso 5. Definir el fichero YAML completo.
-Ahora que tenemos la configuración de los tres servicios, ya podemos definir el docker-compose completo:
+Ahora que tenemos la configuración de los tres servicios, ya podemos definir el docker-compose completo. Guarda fichero como "docker-compose.yml".
 ```
 version: '3'
 services:
@@ -121,4 +121,10 @@ volumes:
   - my-volume:
 ```
 > **Recuerda definir el recurso de volúmenes**
+### Paso 6. Levantar el stack de recursos.
+Para levantar el stack de recursos definido anteriormente, ejecuta el siguiente comando en la ruta donde tengas el fichero docker-compsoe:
+<br/>
+```docker-compose up```
+<br/>
+Puedes comprobar en el log si todo ha ido bien.
 
