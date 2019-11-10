@@ -26,7 +26,22 @@ En un fichero docker-compose, es posible definir tres tipos de recursos básicos
 <br/>
 **-	Redes:** hace referencia a la capa de comunicación que se va a definir para el stack. Aquí se definirán las reglas de comunicación entre los contenedores e incluso entre los contenedores y el host.
 <br/>
-
+```version: '3'
+services:
+  frontend:
+    image: my-front
+    ...
+  backend:
+    image: my-back
+    ...
+  db:
+    image: persistence
+    ...
+volumes:
+   my-volume:
+networks:
+   my-stack-network:
+```
 ## Crear un stack de servicios gestionados por doker-compose.
 
 ### Paso 1. Instalar docker-compose.
